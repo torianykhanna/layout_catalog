@@ -2,12 +2,12 @@
   width: 100%;
 
   &__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  padding: 0 50px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 50px;
+  }
 }
 
 .logo {
@@ -52,14 +52,14 @@
     line-height: 60px;
     display: flex;
     align-items: center;
-  }
 
-  &__link:hover {
-    color: $color-elements;
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   &__link.is-active {
-    color: $color-elements;
+    color: $primary-color;
   }
 
   &__link.is-active::after {
@@ -69,13 +69,7 @@
     bottom: 0;
     width: 100%;
     height: 4px;
-    background-color: $color-elements;
+    background-color: $primary-color;
     border-radius: 8px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .header__container {
-    padding: 0 50px;
   }
 }

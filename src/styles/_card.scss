@@ -1,47 +1,49 @@
 .card {
   width: $card-width;
+  min-height: 408px;
   box-sizing: border-box;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   background-color: $background-color;
-  padding: $size;
-  font-family: $font-main;
+  padding: 32px 16px 15px;
   transition: transform 0.3s ease;
 
-  &__image {
-    width: 100%;
-    display: block;
-    margin-top: $size;
-    margin-bottom: 38px;
-    padding: 0 3px 3px;
+  &:hover {
+    transform: scale(1.2);
+
+    &.card__title {
+      color: $text-color1;
+    }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto 40px;
   }
 
   &__title {
+    margin: 0 0 4px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    max-width: 165px;
     color: $text-color;
+    transition: color 300ms ease;
   }
 
   &__code {
+    margin: 0 0 8px;
     font-size: 10px;
     color: $secondary-text-color;
     line-height: 14px;
-    padding: 5px 0;
     font-weight: 400;
   }
 
   &__rating {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin: 10px 0;
+    align-items: center;
   }
 
   &__reviews {
@@ -54,11 +56,14 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    font-size: 12px;
-    font-weight: 400;
-    color: $secondary-text-color;
-    margin: 13px 0;
+    align-items: center;
+    margin: 14px 0;
+
+    &-lable {
+      font-size: 10px;
+      color: $secondary-text-color;
+      margin-bottom: 2px;
+    }
 
     &-value {
       font-size: $size;
@@ -68,16 +73,19 @@
   }
 
   &__button {
-    display: inline-block;
-    text-align: center;
-    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
     background-color: $primary-color;
     border-radius: 5px;
+    line-height: 16px;
     color: $background-color;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    transition: background-color 0.2s;
+    transition: background-color 300ms;
 
     &:hover {
       background-color: $background-color;
@@ -85,12 +93,4 @@
       color: $primary-color;
     }
   }
-}
-
-.card:hover {
-  transform: scale(1.2);
-}
-
-.card:hover .card__title {
-  color: #34568b;
 }
